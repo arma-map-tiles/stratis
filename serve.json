@@ -1,0 +1,12 @@
+{
+    "public": "web",
+    "headers": [
+        {
+            "source": "**/*.pbf",
+            "headers" : [{
+                "key" : "Content-Encoding",
+                "value" : "gzip"
+            }]
+        }
+    ]
+}

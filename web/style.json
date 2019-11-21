@@ -1,0 +1,124 @@
+{
+    "version": 8,
+    "name": "Custom",
+    "metadata": {
+      "mapbox:autocomposite": true
+    },
+    "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+    "sources": {
+      "composite": {
+        "type": "vector",
+        "tiles": ["http://localhost:8000/tiles/{z}/{x}/{y}.pbf"],
+        "minzoom": 0,
+        "maxzoom": 15
+      }
+    },
+    "layers": [
+      {
+        "id": "background",
+        "type": "background",
+        "paint": {
+          "background-color": "#f7f4f2"
+        }
+      },
+      {
+        "id": "houses",
+        "type": "fill",
+        "source": "composite",
+        "source-layer": "houses",
+        "minzoom": 0,
+        "paint": {
+          "fill-color": "#7a7a7a"
+        }
+      },
+      {
+        "id": "Bushes",
+        "type": "symbol",
+        "source": "composite",
+        "source-layer": "bushes",
+        "minzoom": 0,
+        "layout": {
+          "icon-image": "bush",
+          "icon-size": 0.8
+        }
+      },
+      {
+        "id": "Rocks",
+        "type": "symbol",
+        "source": "composite",
+        "source-layer": "rocks",
+        "minzoom": 0,
+        "maxzoom": 14,
+        "layout": {
+            "icon-image": "rock",
+            "icon-size": 0.3
+        }
+      },
+      {
+        "id": "chapels",
+        "type": "symbol",
+        "source": "composite",
+        "source-layer": "chapels",
+        "minzoom": 1,
+        "layout": {
+            "icon-image": "chapel",
+            "icon-size": 0.4
+        }
+      },
+      {
+        "id": "crosses",
+        "type": "symbol",
+        "source": "composite",
+        "source-layer": "crosses",
+        "minzoom": 1,
+        "layout": {
+            "icon-image": "cross",
+            "icon-size": 0.4
+        }
+      },
+      {
+        "id": "lighthouses",
+        "type": "symbol",
+        "source": "composite",
+        "source-layer": "lighthouses",
+        "minzoom": 1,
+        "layout": {
+            "icon-image": "lighthouse",
+            "icon-size": 0.4
+        }
+      },
+      {
+        "id": "shipwrecks",
+        "type": "symbol",
+        "source": "composite",
+        "source-layer": "shipwrecks",
+        "minzoom": 1,
+        "layout": {
+            "icon-image": "shipwreck",
+            "icon-size": 0.4
+        }
+      },
+      {
+        "id": "transmitters",
+        "type": "symbol",
+        "source": "composite",
+        "source-layer": "transmitters",
+        "minzoom": 1,
+        "layout": {
+            "icon-image": "transmitter",
+            "icon-size": 0.4
+        }
+      },
+      {
+        "id": "watertowers",
+        "type": "symbol",
+        "source": "composite",
+        "source-layer": "watertowers",
+        "minzoom": 1,
+        "layout": {
+            "icon-image": "watertower",
+            "icon-size": 0.4
+        }
+      }
+    ]
+  }
